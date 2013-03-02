@@ -19,6 +19,12 @@ namespace Retlang.Fibers
 
         private int? _threadId = null;
 
+        public ContextFiber(Action<Action> enqueue, IExecutor executor)
+            : this(new ExecutionContext(enqueue), executor)
+        {
+
+        }
+
         public ContextFiber(IExecutionContext executionContext, IExecutor executor)
         {
             _executionContext = executionContext;

@@ -6,7 +6,7 @@ GitHub fork of Retlang: http://code.google.com/p/retlang/
 
 - Added support for MonoTouch and MonoDroid.
 - Consistent IFiber.Start() and IFiber.Enqueue() behavior across IFiber implementations based on ExecutionState.
-- Renamed classes that support adapting Retlang to outside threading models to ContextFiber, rather than defining them as a GuiFiber.
+- Renamed class that supports adapting Retlang to outside threading models from GuiFiber to ContextFiber.
 - Renamed inconsistent Subscriber, Subscribable interfaces and classes to Receiver.
 - Added IFiber.Assert()
 - Added alternate unit test assembly (Retlang.Test) that uses Moq and eschews long running tests.
