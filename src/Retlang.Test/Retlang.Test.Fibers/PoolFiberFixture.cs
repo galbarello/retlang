@@ -21,38 +21,6 @@ namespace Retlang.Test.Fibers
         {
             Assert.Throws<ThreadStateException>(_fiber.Start);
         }
-
-        [Test]
-        public void Assert_SameThread_NoException()
-        {
-            var handle = new AutoResetEvent(false);
-            Exception exception = null;
-
-            _fiber.Enqueue(() =>
-            {
-                try
-                {
-                    _fiber.Assert();
-                }
-                catch (Exception ex)
-                {
-                    exception = ex;
-                }
-                finally
-                {
-                    handle.Set();
-                }
-            });
-
-            handle.WaitOne();
-            Assert.IsNull(exception);
-        }
-
-        [Test]
-        public void Assert_DifferentThread_Exception()
-        {
-            Assert.Throws<ThreadStateException>(_fiber.Assert);
-        }
     }
 }
 

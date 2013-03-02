@@ -17,8 +17,6 @@ namespace Retlang.Fibers
         private readonly IExecutor _executor;
         private readonly List<Action> _queue = new List<Action>();
 
-        private int? _threadId = null;
-
         public ContextFiber(Action<Action> enqueue, IExecutor executor)
             : this(new ExecutionContext(enqueue), executor)
         {
@@ -29,14 +27,6 @@ namespace Retlang.Fibers
         {
             _executionContext = executionContext;
             _executor = executor;
-        }
-
-        public override void Assert()
-        {
-            if (Thread.CurrentThread.ManagedThreadId != _threadId)
-            {
-                throw new ThreadStateException();
-            }
         }
 
         /// <summary>
@@ -68,19 +58,6 @@ namespace Retlang.Fibers
                 return;
             }
 
-            Action wrapped_action = () =>
-            {
-                try
-                {
-                    _threadId = Thread.CurrentThread.ManagedThreadId;
-                    action();
-                }
-                finally
-                {
-                    _threadId = null;
-                }
-            };
-
             switch (_state)
             {
                 case ExecutionState.Created:
@@ -88,7 +65,7 @@ namespace Retlang.Fibers
                     {
                         if (_state == ExecutionState.Created)
                         {
-                            _queue.Add(wrapped_action);
+                            _queue.Add(action);
                         }
                         else
                         {
@@ -97,7 +74,7 @@ namespace Retlang.Fibers
                     }
                     break;
                 default:
-                    _executionContext.Enqueue(() => _executor.Execute(wrapped_action));
+                    _executionContext.Enqueue(() => _executor.Execute(action));
                     break;
             }
         }

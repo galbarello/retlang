@@ -20,11 +20,6 @@ namespace Retlang.Fibers
 
         private bool _root = true;
 
-        public void Assert()
-        {
-
-        }
-
         public void Start()
         {
 

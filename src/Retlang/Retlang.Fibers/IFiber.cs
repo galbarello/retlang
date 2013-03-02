@@ -9,11 +9,6 @@ namespace Retlang.Fibers
     public interface IFiber : ISubscriptionRegistry, IExecutionContext, IScheduler, IDisposable
     {
         /// <summary>
-        /// Raise an exception if called from another fiber.
-        /// </summary> 
-        void Assert();
-
-        /// <summary>
         /// Start consuming actions.
         /// </summary>
         void Start();

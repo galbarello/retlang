@@ -21,12 +21,6 @@ namespace Retlang.Test.Fibers
         {
             Assert.DoesNotThrow(_fiber.Start);
         }
-
-        [Test]
-        public void Assert_Always_NoException()
-        {
-            Assert.DoesNotThrow(_fiber.Assert);
-        }
     }
 }
 

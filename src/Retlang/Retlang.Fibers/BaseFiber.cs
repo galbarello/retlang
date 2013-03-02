@@ -16,11 +16,6 @@ namespace Retlang.Fibers
             _scheduler = new Scheduler(this);
         }
 
-        public virtual void Assert()
-        {
-
-        }
-
         public virtual void Start()
         {
             if (_state != ExecutionState.Created)

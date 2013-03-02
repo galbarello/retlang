@@ -77,14 +77,6 @@ namespace Retlang.Fibers
             return Interlocked.Increment(ref THREAD_COUNT);
         }
 
-        public override void Assert()
-        {
-            if (Thread.CurrentThread.ManagedThreadId != _thread.ManagedThreadId)
-            {
-                throw new ThreadStateException();
-            }
-        }
-
         /// <summary>
         /// <see cref="IFiber.Start"/>
         /// </summary>
