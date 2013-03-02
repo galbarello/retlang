@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Retlang\Retlang.csproj">
-      <Project>{65ABCF4F-88F0-46EF-A6CF-71850019262E}</Project>
+      <Project>{7BDE45CF-B6C3-4460-91F4-8BAB08D82F78}</Project>
       <Name>Retlang</Name>
     </ProjectReference>
   </ItemGroup>

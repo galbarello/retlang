@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Retlang", "Retlang\Retlang.csproj", "{65ABCF4F-88F0-46EF-A6CF-71850019262E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Retlang", "Retlang\Retlang.csproj", "{7BDE45CF-B6C3-4460-91F4-8BAB08D82F78}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetlangTests", "RetlangTests\RetlangTests.csproj", "{B8E66C01-A2BE-46D5-A985-53A5D3A6FC4C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Retlang.Test", "Retlang.Test\Retlang.Test.csproj", "{5DA1BBDF-8CFD-4CD0-9148-23F31CF6AB72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Retlang.Android", "Retlang\Retlang.Android.csproj", "{83D6F016-EED6-42F2-90D1-BE31B90D85A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Retlang.iOS", "Retlang\Retlang.iOS.csproj", "{F34053C7-929D-46FD-AC1A-22C66A35495E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,14 +24,26 @@ Global
 		{5DA1BBDF-8CFD-4CD0-9148-23F31CF6AB72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DA1BBDF-8CFD-4CD0-9148-23F31CF6AB72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DA1BBDF-8CFD-4CD0-9148-23F31CF6AB72}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65ABCF4F-88F0-46EF-A6CF-71850019262E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65ABCF4F-88F0-46EF-A6CF-71850019262E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65ABCF4F-88F0-46EF-A6CF-71850019262E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65ABCF4F-88F0-46EF-A6CF-71850019262E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BDE45CF-B6C3-4460-91F4-8BAB08D82F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BDE45CF-B6C3-4460-91F4-8BAB08D82F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BDE45CF-B6C3-4460-91F4-8BAB08D82F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BDE45CF-B6C3-4460-91F4-8BAB08D82F78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83D6F016-EED6-42F2-90D1-BE31B90D85A8}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D6F016-EED6-42F2-90D1-BE31B90D85A8}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{83D6F016-EED6-42F2-90D1-BE31B90D85A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D6F016-EED6-42F2-90D1-BE31B90D85A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D6F016-EED6-42F2-90D1-BE31B90D85A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D6F016-EED6-42F2-90D1-BE31B90D85A8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B8E66C01-A2BE-46D5-A985-53A5D3A6FC4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8E66C01-A2BE-46D5-A985-53A5D3A6FC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8E66C01-A2BE-46D5-A985-53A5D3A6FC4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8E66C01-A2BE-46D5-A985-53A5D3A6FC4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F34053C7-929D-46FD-AC1A-22C66A35495E}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34053C7-929D-46FD-AC1A-22C66A35495E}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{F34053C7-929D-46FD-AC1A-22C66A35495E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34053C7-929D-46FD-AC1A-22C66A35495E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34053C7-929D-46FD-AC1A-22C66A35495E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34053C7-929D-46FD-AC1A-22C66A35495E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Retlang\Retlang.csproj

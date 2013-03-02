@@ -16,8 +16,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>RetlangTests.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>False</SignAssembly>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -110,12 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Retlang\Retlang.csproj">
-      <Project>{65ABCF4F-88F0-46EF-A6CF-71850019262E}</Project>
+      <Project>{7BDE45CF-B6C3-4460-91F4-8BAB08D82F78}</Project>
       <Name>Retlang</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="RetlangTests.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
