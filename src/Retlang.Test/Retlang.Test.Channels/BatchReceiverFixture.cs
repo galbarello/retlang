@@ -37,7 +37,7 @@ namespace Retlang.Test.Channels
             for (var x = 0; x < 10; x++)
             {
                 _receiver.Receive(x);
-                Thread.Sleep(25);
+                Thread.Sleep(40);
             }
             
             var signaled = _handle.WaitOne(1000);

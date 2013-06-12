@@ -28,7 +28,6 @@ namespace RetlangTests.Examples
 
     [TestFixture]
     [Category("Demo")]
-    [Ignore("Demo")]
     public class AlgebraDemonstration
     {
         // An immutable class that represents a quadratic equation

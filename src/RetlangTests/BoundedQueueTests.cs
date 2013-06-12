@@ -35,7 +35,7 @@ namespace RetlangTests
             repo.VerifyAll();
         }
         
-        [Test, Ignore("Rhino Playback() broken on mono?")]
+        [Test]
         public void ShouldOnlyExecuteActionsQueuedWhileNotStopped()
         {
             var mockery = new MockRepository();

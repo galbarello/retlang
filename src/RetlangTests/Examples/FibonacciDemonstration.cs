@@ -7,8 +7,7 @@ namespace RetlangTests.Examples
 {
     
     [TestFixture]
-    [Category("Demo")]
-    [Ignore("Demo")]
+    [Category("Demo")]   
     public class FibonacciDemonstration
     {
         // Simple immutable class that serves as a message

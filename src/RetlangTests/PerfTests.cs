@@ -36,13 +36,13 @@ namespace RetlangTests
     [TestFixture]
     public class PerfTests
     {
-        [Test, Explicit]
+        [Test]
         public void PointToPointPerfTestWithStruct()
         {
             RunBoundedQueue();
         }
 
-        [Test, Explicit]
+        [Test]
         public void BusyWaitQueuePointToPointPerfTestWithStruct()
         {
             RunBusyWaitQueue();
@@ -104,7 +104,7 @@ namespace RetlangTests
             }
         }
 
-        [Test, Explicit]
+        [Test]
         public void PointToPointPerfTestWithInt()
         {
             var executor = new BoundedQueue(new PerfExecutor()) { MaxDepth = 10000, MaxEnqueueWaitTimeInMs = 1000 };
@@ -133,7 +133,7 @@ namespace RetlangTests
             }
         }
 
-        [Test, Explicit]
+        [Test]
         public void PointToPointPerfTestWithObject()
         {
             var executor = new BoundedQueue(new PerfExecutor()) { MaxDepth = 100000, MaxEnqueueWaitTimeInMs = 1000 };

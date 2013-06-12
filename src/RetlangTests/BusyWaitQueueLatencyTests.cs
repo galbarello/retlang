@@ -11,8 +11,7 @@ namespace RetlangTests
     [TestFixture]
     public class BusyWaitQueueLatencyTests
     {
-        [Test]
-        [Explicit]
+        [Test]       
         public void CompareBusyWaitQueueVsDefaultQueueLatency()
         {
             Func<ThreadFiber> blocking = () => new ThreadFiber();
@@ -51,23 +50,23 @@ namespace RetlangTests
 
                 if (prior >= 0)
                 {
-                    Action<Message> cb = delegate(Message message)
-                                         {
-                                             if (target != null)
-                                             {
-                                                 target.Publish(message);
-                                             }
-                                             else
-                                             {
-                                                 var now = Stopwatch.GetTimestamp();
-                                                 var diff = now - message.Time;
-                                                 if (message.Log)
-                                                 {
-                                                     Console.WriteLine("qTime: " + diff * msPerTick);
-                                                 }
-                                                 message.Latch.Set();
-                                             }
-                                         };
+                    Action<Message> cb = message =>
+                    {
+                        if (target == null)
+                        {
+                            var now = Stopwatch.GetTimestamp();
+                            var diff = now - message.Time;
+                            if (message.Log)
+                            {
+                                Console.WriteLine("qTime: " + diff * msPerTick);
+                            }
+                            message.Latch.Set();
+                        }
+                        else
+                        {
+                            target.Publish(message);
+                        }
+                    };
 
                     channels[prior].Subscribe(fibers[i], cb);
                 }
